@@ -5,11 +5,11 @@ hooks:
   build: |
     echo "echoing version:" $VERSION
     echo "echoing platform cache dir:" $PLATFORM_CACHE_DIR
-    if [ -z "$(ls -a $PLATFORM_CACHE_DIR)" ]; then
+    if [ -f "$(ls -a $PLATFORM_CACHE_DIR)/README.txt" ]; then
       wget https://artifacts.elastic.co/downloads/kibana/kibana-7.2.1-linux-x86_64.tar.gz
       tar xzvf kibana-7.2.1-linux-x86_64.tar.gz -C $PLATFORM_CACHE_DIR
-      pv cp -r $PLATFORM_CACHE_DIR/kibana-7.2.1-linux-x86_64 $PLATFORM_APP_DIR/
     fi
+    cp -r $PLATFORM_CACHE_DIR/kibana-7.2.1-linux-x86_64 $PLATFORM_APP_DIR/
     mv kibana.yml kibana-7.2.1-linux-x86_64/config/
 
 relationships:
