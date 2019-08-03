@@ -3,7 +3,7 @@ type: nodejs:10
 disk: 4096
 hooks:
   build: |
-    echo $VERSION
+    echo "echoing version:" $VERSION
     wget https://artifacts.elastic.co/downloads/kibana/kibana-7.2.1-linux-x86_64.tar.gz
     tar xzvf kibana-7.2.1-linux-x86_64.tar.gz
     mv kibana.yml kibana-7.2.1-linux-x86_64/config/
