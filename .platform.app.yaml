@@ -7,10 +7,10 @@ hooks:
     echo $VERSION
     wget https://artifacts.elastic.co/downloads/kibana/kibana-7.2.1-linux-x86_64.tar.gz
     tar xzvf kibana-7.2.1-linux-x86_64.tar.gz
-    mkdir /init/
-    mv kibana-7.2.1-linux-x86_64/optimize/bundles /init/
+    mkdir init/
+    mv kibana-7.2.1-linux-x86_64/optimize/bundles init/
   deploy: |
-    mv /init/bundles kibana-7.2.1-linux-x86_64/optimize/
+    mv init/bundles kibana-7.2.1-linux-x86_64/optimize/
 
 relationships:
   elasticsearch: elastic:elasticsearch
