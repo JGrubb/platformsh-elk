@@ -17,3 +17,4 @@ web:
 
 mounts:
   "kibana-7.2.1-linux-x86_64/optimize": "shared:files/optimize"
+  "kibana-7.2.1-linux-x86_64/data": "shared:files/data"
