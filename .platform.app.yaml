@@ -2,9 +2,8 @@ name: kibana
 type: nodejs:10
 disk: 128
 hooks:
-  build:
+  build: |
     wget https://artifacts.elastic.co/downloads/kibana/kibana-7.2.1-linux-x86_64.tar.gz
-    ls
     tar xzvf kibana-7.2.1-linux-x86_64.tar.gz
 
 relationships:
