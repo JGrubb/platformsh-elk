@@ -1,6 +1,6 @@
 name: kibana
 type: nodejs:10
-disk: 128
+disk: 4096
 hooks:
   build: |
     echo $VERSION
@@ -15,6 +15,7 @@ web:
   commands:
     start: |
       cd kibana-7.2.1-linux-x86_64 
+      bin/kibana
 
 mounts:
   "kibana-7.2.1-linux-x86_64/optimize": "shared:files/optimize"
