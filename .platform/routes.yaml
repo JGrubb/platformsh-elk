@@ -1,3 +1,13 @@
 https://{default}:
   type: upstream
   upstream: kibana:http
+
+https://es.{default}:
+  type: upstream
+  upstream: elastic:elasticsearch
+  tls:
+    client_authentication: "require"
+    client_certificate_authorities:
+      - !include
+        type: string
+        path: rootCA.crt
