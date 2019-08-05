@@ -4,7 +4,7 @@ https://{default}:
 
 https://es.{default}:
   type: upstream
-  upstream: elastic:elasticsearch
+  upstream: elastic_test:elasticsearch
   tls:
     client_authentication: "require"
     client_certificate_authorities:
