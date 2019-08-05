@@ -13,7 +13,7 @@ hooks:
     mv kibana.yml kibana-7.2.1-linux-x86_64/config/
 
 relationships:
-  elasticsearch: elastic:elasticsearch
+  elasticsearch: elastic_test:elasticsearch
 
 web:
   commands:
